@@ -21,7 +21,7 @@
     /* vimium theme uses colors: flamingo, peach, rosewater, green, blue, lavender */
     --tridactyl-fg: var(--fg);
     --tridactyl-bg: var(--bg);
-    --tridactyl-url-fg: var(--pink);
+    --tridactyl-url-fg: var(--rosewater);
     --tridactyl-url-bg: var(--bg);
     --tridactyl-highlight-box-bg: var(--currentline);
     --tridactyl-highlight-box-fg: var(--fg);
@@ -66,9 +66,9 @@
     font-weight: 200;
     border-spacing: 0;
     table-layout: fixed;
-    padding: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
+    /* padding-top: 1rem; */
+    /* padding-bottom: 1rem; */
 }
 
 #completions > div {
@@ -123,12 +123,21 @@
 
 #completions table tr .title {
     width: 50%;
+    padding-left: 1rem;
+}
+
+#completions table tr .content {
+  padding-right: 1rem;
 }
 
 #completions table tr {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+#completions table tr td {
+  padding: .5rem 0;
 }
 
 #completions .sectionHeader {
@@ -138,6 +147,7 @@
     padding: 1rem !important;
     padding-left: unset;
     padding-bottom: 0.2rem;
+    color: var(--peach);
 }
 
 #cmdline_iframe {
@@ -162,11 +172,12 @@
 }
 
 #completions .focused {
-    background: var(--blue);
-    color: var(--bg);
+    background: var(--currentline);
+    color: var(--blue);
+    font-weight: bold;
 }
 
 #completions .focused .url {
-    background: var(--green);
-    color: var(--bg);
+    background: var(--currentline);
+    color: var(--green);
 }
