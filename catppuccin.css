@@ -121,12 +121,13 @@
     table-layout: unset;
 }
 
-#completions table tr .title {
+#completions table tr .title, #completions table tr td.excmd {
     width: 50%;
     padding-left: 1rem;
+    color: var(--blue);
 }
 
-#completions table tr .content {
+#completions table tr .content, #completions table tr td.documentation {
   padding-right: 1rem;
 }
 
@@ -173,8 +174,11 @@
 
 #completions .focused {
     background: var(--currentline);
-    color: var(--blue);
+    /* color: var(--blue); */
     font-weight: bold;
+}
+#completions .focused td.title {
+  color: var(--pink);
 }
 
 #completions .focused .url {
