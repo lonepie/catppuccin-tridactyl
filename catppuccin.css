@@ -145,7 +145,7 @@
     background: unset;
     font-weight: bold;
     border-bottom: unset;
-    padding: 1rem !important;
+    padding: 1rem 1rem 0 !important;
     padding-left: unset;
     padding-bottom: 0.2rem;
     color: var(--peach);
